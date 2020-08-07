@@ -24,10 +24,7 @@ public class JPasswd extends Application {
         var scene = new Scene(loadFXMl(fxml));
         stage.setScene(scene);
         IconsLoader.load(stage);
-        if (fxml.matches("(.*main-window.*)"))
-            stage.setResizable(true);
-        else
-            stage.setResizable(false);
+        stage.setResizable(fxml.matches(".*main-window.*"));
         return stage;
     }
 
