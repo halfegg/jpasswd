@@ -2,12 +2,16 @@ package com.halfegg.jpasswd;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class ChangeUserWindowController {
 
+    @FXML
+    private AnchorPane root;
     @FXML
     private PasswordField userId;
     @FXML
@@ -26,7 +30,8 @@ public class ChangeUserWindowController {
                     databaseManager.close();
                     userId.clear();
                     newUserId.clear();
-                    var notification = new Notification("User ID updated.");
+                    var stage = (Stage) root.getScene().getWindow();
+                    var notification = new Notification(stage, "User ID updated.");
                     notification.show();
                 }
             }

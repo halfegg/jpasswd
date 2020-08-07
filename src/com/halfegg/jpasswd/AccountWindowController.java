@@ -69,7 +69,8 @@ public class AccountWindowController {
                 if (databaseManager.add(account)) {
                     databaseManager.close();
                     clearFields();
-                    var notification = new Notification(account.getAccountName() + "'s account added.");
+                    var stage = (Stage) root.getScene().getWindow();
+                    var notification = new Notification(stage, account.getAccountName() + "'s account added.");
                     notification.show();
                 }
 

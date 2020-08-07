@@ -11,7 +11,9 @@ import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -65,10 +67,17 @@ public class MainWindowController {
     private void about() {
         try {
             var stage = new Stage();
+            var window = root.getScene().getWindow();
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("resources/about-window.fxml"))));
+            stage.initOwner(window);
+            stage.initModality(Modality.NONE);
+            stage.initStyle(StageStyle.UTILITY);
             stage.setResizable(false);
             stage.setTitle("About");
             stage.show();
+            stage.requestFocus();
+            stage.setX(window.getX() + window.getWidth() / 2 - stage.getWidth() / 2);
+            stage.setY(window.getY() + window.getHeight() / 2 - stage.getHeight() / 2);
         } catch (IOException ex) {
             ExceptionLogger.log(MainWindowController.class.getName(), "about()", ex);
             ex.printStackTrace();
@@ -92,7 +101,7 @@ public class MainWindowController {
                         clipboardContent.putString(new String(Crypto.decrypt(account.getPassword().getBytes())));
                         if (clipboard.setContent(clipboardContent)) {
                             authenticationDialog.close();
-                            var notification = new Notification(account.getAccountName() + "'s password copied to clipboard.");
+                            var notification = new Notification(stage, account.getAccountName() + "'s password copied to clipboard.");
                             notification.show();
                         }
                     }
@@ -123,7 +132,7 @@ public class MainWindowController {
                             else
                                 populateTableView();
                             authenticationDialog.close();
-                            var notification = new Notification(account.getAccountName() + "'s account removed.");
+                            var notification = new Notification(stage, account.getAccountName() + "'s account removed.");
                             notification.show();
                         }
                     }

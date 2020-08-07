@@ -2,7 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<AnchorPane styleClass="change-user-window" prefHeight="260.0" prefWidth="420.0"
+<AnchorPane fx:id="root" styleClass="change-user-window" prefHeight="260.0" prefWidth="420.0"
             xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
             stylesheets="@style.css" fx:controller="com.halfegg.jpasswd.ChangeUserWindowController">
    <VBox layoutX="55.0" layoutY="30.0" spacing="8.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0"
