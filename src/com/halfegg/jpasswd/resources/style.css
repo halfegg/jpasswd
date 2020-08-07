@@ -1,0 +1,95 @@
+/* MAIN-WINDOW */
+.main-window {
+
+}
+
+/* menu-bar */
+.main-window .menu-bar .container .menu-button .label,
+.main-window .menu-bar .menu .menu-item .label {
+    -fx-font-size: 13;
+}
+
+.main-window .context-menu {
+    -fx-padding: 2 0 2 0;
+}
+
+/* button */
+.main-window .button {
+    -fx-font-size: 13;
+}
+
+/* list-view */
+.main-window .table-view .virtual-flow .scroll-bar:vertical {
+    -fx-pref-width: 16;
+    -fx-padding: 2;
+}
+.main-window .table-view .virtual-flow .scroll-bar:horizontal {
+    -fx-pref-height: 16;
+    -fx-padding: 2;
+}
+
+.main-window .table-view .virtual-flow .scroll-bar,
+.main-window .table-view .virtual-flow .scroll-bar:pressed,
+.main-window .table-view .virtual-flow .scroll-bar:focused {
+    -fx-font-size: 15;
+    -fx-background-color: transparent;
+}
+
+
+/* ACCOUNT-WINDOW */
+.account-window {
+
+}
+
+.account-window .label,
+.account-window .button,
+.account-window .text-field {
+    -fx-font-size: 13;
+}
+
+
+/* CHANGE-USER-WINDOW */
+.change-user-window {
+
+}
+
+.change-user-window .label,
+.change-user-window .button,
+.change-user-window .text-field {
+    -fx-font-size: 13;
+}
+
+
+/* PASSWORD-GENERATOR-WINDOW */
+.password-generator-window {
+
+}
+
+.password-generator-window .button,
+.password-generator-window .text-field,
+.password-generator-window .choice-box .label,
+.password-generator-window .radio-button {
+    -fx-font-size: 13;
+}
+
+
+/* AUTHENTICATION-DIALOG */
+.authentication-dialog {
+
+}
+
+.authentication-dialog .button,
+.authentication-dialog .password-field,
+.authentication-dialog .label {
+    -fx-font-size: 13;
+}
+
+
+/* ABOUT-WINDOW */
+.about-window {
+
+}
+
+.about-window .text {
+    -fx-font-size: 13;
+}

@@ -13,10 +13,10 @@
     </padding>
     <TextFlow>
         <VBox spacing="8.0">
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Author     :     halfegg"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact    :    halfdvl@gmail.com"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Company :    com.halfegg.freeapps"/>
-            <Text layoutX="10.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            <Text styleClass="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Author     :     halfegg"/>
+            <Text styleClass="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact    :    halfdvl@gmail.com"/>
+            <Text styleClass="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Company :    com.halfegg.freeapps"/>
+            <Text styleClass="text" layoutX="10.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0"
                   text="App Site   :    https://github.com/halfegg/jpasswd"/>
         </VBox>
     </TextFlow>
