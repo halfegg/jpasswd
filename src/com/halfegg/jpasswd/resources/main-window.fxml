@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="760.0" styleClass="main-window" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.halfegg.jpasswd.MainWindowController">
+    <MenuBar>
+        <Menu text="_File">
+            <MenuItem mnemonicParsing="false" onAction="#addAccount" text="Add Account" />
+            <MenuItem mnemonicParsing="false" onAction="#changeUserID" text="Change User ID" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Close" />
+        </Menu>
+        <Menu text="_Help">
+            <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+        </Menu>
+    </MenuBar>
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <TableView fx:id="tableView" layoutX="190.0" layoutY="49.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0">
+            <columns>
+                <TableColumn fx:id="accountNameColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="184.0" text="Account Name" />
+                <TableColumn fx:id="userNameColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="184.0" text="User Name" />
+                <TableColumn fx:id="emailAddColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="184.0" text="Email Add" />
+                <TableColumn fx:id="passwordColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="184.0" text="Password" />
+            </columns>
+        </TableView>
+        <Button layoutX="409.0" layoutY="330.0" mnemonicParsing="false" onAction="#getPassword" prefWidth="110.0" text="Get Password" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="134.0" />
+        <Button layoutX="511.0" layoutY="317.0" mnemonicParsing="false" onAction="#removeAccount" prefWidth="110.0" text="Remove" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+    </AnchorPane>
+</VBox>

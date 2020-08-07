@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane styleClass="change-user-window" prefHeight="260.0" prefWidth="420.0"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@style.css" fx:controller="com.halfegg.jpasswd.ChangeUserWindowController">
+   <VBox layoutX="55.0" layoutY="30.0" spacing="8.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0"
+         AnchorPane.topAnchor="24.0">
+      <VBox spacing="4.0" VBox.vgrow="ALWAYS">
+         <Label text="User ID"/>
+         <PasswordField fx:id="userId"/>
+      </VBox>
+      <VBox spacing="4.0" VBox.vgrow="ALWAYS">
+         <Label text="New User ID"/>
+         <PasswordField fx:id="newUserId"/>
+      </VBox>
+   </VBox>
+   <Button layoutX="86.0" layoutY="209.0" mnemonicParsing="false" onAction="#changeUserId" prefWidth="75.0"
+           text="Change" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="115.0"/>
+   <Button layoutX="24.0" layoutY="209.0" mnemonicParsing="false" onAction="#backToList" prefWidth="75.0" text="← Back"
+           AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="32.0"/>
+</AnchorPane>
