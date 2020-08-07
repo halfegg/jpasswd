@@ -2,6 +2,8 @@ package com.halfegg.jpasswd;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -61,6 +63,16 @@ public class MainWindowController {
 
     @FXML
     private void about() {
+        try {
+            var stage = new Stage();
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("resources/about-window.fxml"))));
+            stage.setResizable(false);
+            stage.setTitle("About");
+            stage.show();
+        } catch (IOException ex) {
+            ExceptionLogger.log(MainWindowController.class.getName(), "about()", ex);
+            ex.printStackTrace();
+        }
     }
 
     @FXML

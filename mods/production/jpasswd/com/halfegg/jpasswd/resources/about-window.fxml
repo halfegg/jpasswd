@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+
+<StackPane styleClass="about-window" prefWidth="380.0" xmlns="http://javafx.com/javafx/11.0.1" stylesheets="@style.css">
+    <padding>
+        <Insets bottom="24.0" left="32.0" right="32.0" top="24.0"/>
+    </padding>
+    <TextFlow>
+        <VBox spacing="8.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Author     :     halfegg"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact    :    halfdvl@gmail.com"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Company :    com.halfegg.freeapps"/>
+            <Text layoutX="10.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                  text="App Site   :    https://github.com/halfegg/jpasswd"/>
+        </VBox>
+    </TextFlow>
+</StackPane>

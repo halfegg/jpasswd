@@ -31,7 +31,7 @@ public class ExceptionLogger {
         var content = "\n\n\n#jtext Exception Log\n#" +
                 LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")) +
                 "\nSEVERE: " + className + " " + methodName + "\n";
-        write(DBG_LOG_PATH.toFile(), content, true);
+        write(DBG_LOG_PATH.toFile(), content);
         write(DBG_LOG_PATH.toFile(), exception);
     }
 
@@ -48,8 +48,8 @@ public class ExceptionLogger {
         }
     }
 
-    private static void write(File file, String content, boolean append) {
-        try (var writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file, append)))) {
+    private static void write(File file, String content) {
+        try (var writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file, true)))) {
             writer.write(content);
         } catch (NullPointerException | IOException ex) {
             ExceptionLogger.log(ExceptionLogger.class.getName(), "write(File, String, boolean)", ex);
